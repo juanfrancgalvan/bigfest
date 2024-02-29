@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Juan Francisco Galván">
+  <meta name="date" content="29/08/2023">
+  <meta name="description" content="Music festival of the most important international bands with affordable prices">
+  <meta name="keywords" content="festival, music, live">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="build/assets/images/favicon.webp" type="image/x-icon">
+  <link rel="preload" href="build/styles/style.css" as="style">
+  <link rel="stylesheet" href="build/styles/style.css">
+  <script src="build/scripts/script.js" defer></script>
+  <title>Big Fest</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Big Fest</h1>
+    <nav class="nav">
+      <a href="#lineup">Line-Up</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#tickets">Tickets</a>
+    </nav>
+  </header>
+  <section class="video">
+    <div class="overlay">
+      <div class="video-content">
+        <h2>Big Fest</h2>
+        <p>October 2023, Argentina</p>
+      </div>
+    </div>
+    <video autoplay muted loop>
+      <source src="source/assets/videos/concert.mp4" type="video/mp4">
+      <source src="source/assets/videos/concert.ogg" type="video/ogg">
+      <source src="source/assets/videos/concert.webm" type="video/webm">
+    </video>
+  </section>
+  <main>
+    <section class="festival container">
+      <img loading="lazy" width="200" height="300" src="build/assets/images/hero.webp" alt="Vocalist image">
+      <div class="festival-content">
+        <h2>HarmonyWave</h2>
+        <p class="date">Octubre 2023, Buenos Aires, Argentina</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem accusantium laboriosam ipsam quod fuga sint quae, ex doloremque earum quaerat! Sint illum odit maiores aut, deserunt nobis facere similique vitae.</p>
+      </div>
+    </section>
+    <section id="lineup" class="lineup">
+      <h3>Line-Up</h3>
+      <!-- Line-Up 1 -->
+      <p class="day">Friday 19</p>
+      <div class="stage-grid container">
+        <div class="stage rock background-blue">
+          <p class="stage-name">Indie Stage</p>
+          <img src="build/assets/images/icon2.webp" alt="Indie stage logo">
+          <ul class="calendar">
+            <li>20:00 | <span>Conociendo Rusia</span></li>
+            <li>21:00 | <span>Bandalos Chinos</span></li>
+            <li>22:00 | <span>Usted Señalemelo</span></li>
+            <li>23:00 | <span>Isla de Caras</span></li>
+            <li>00:00 | <span>El Zar</span></li>
+            <li>01:00 | <span>1915</span></li>
+          </ul>
+        </div>
+        <div class="stage edm background-yellow">
+          <p class="stage-name">Hip-Hop Stage</p>
+          <img src="build/assets/images/icon1.webp" alt="Hip-Hop stage logo">
+          <ul class="calendar">
+            <li>20:00 | <span>Kendrick Lamar</span></li>
+            <li>21:00 | <span>J.Cole</span></li>
+            <li>22:00 | <span>Kanye West</span></li>
+            <li>23:00 | <span>Drake</span></li>
+            <li>00:00 | <span>Lil Wayne</span></li>
+            <li>01:00 | <span>Eminem</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Line-Up 2 -->
+      <p class="day">Saturday 20</p>
+      <div class="stage-grid container">
+        <div class="stage rock background-blue">
+          <p class="stage-name">Pop Stage</p>
+          <img src="build/assets/images/icon2.webp" alt="Pop stage logo">
+          <ul class="calendar">
+            <li>20:00 | <span>Arctic Monkeys</span></li>
+            <li>21:00 | <span>Imagine Dragons</span></li>
+            <li>22:00 | <span>Twenty One Pilots</span></li>
+            <li>23:00 | <span>The 1975</span></li>
+            <li>00:00 | <span>Greta Van Fleet</span></li>
+            <li>01:00 | <span>Cage the Elephant</span></li>
+          </ul>
+        </div>
+        <div class="stage edm background-yellow">
+          <p class="stage-name">EDM Stage</p>
+          <img src="build/assets/images/icon1.webp" alt="EDM stage logo">
+          <ul class="calendar">
+            <li>20:00 | <span>Calvin Harris</span></li>
+            <li>21:00 | <span>David Guetta</span></li>
+            <li>22:00 | <span>Kygo</span></li>
+            <li>23:00 | <span>Martin Garrix</span></li>
+            <li>00:00 | <span>Deadmau5</span></li>
+            <li>01:00 | <span>Disclosure</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="gallery container">
+      <h3>Gallery</h3>
+      <ul class="gallery-images"></ul>
+    </section>
+    <section id="tickets" class="tickets">
+      <h3>Tickets</h3>
+      <div class="container tickets-grid">
+        <!-- Ticket 1 -->
+        <div class="basic pass">
+          <p class="pass-name">Basic</p>
+          <header class="pass-header">
+            <p>Includes</p>
+          </header>
+          <div class="pass-body">
+            <ul>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+            </ul>
+          </div>
+          <footer class="pass-footer">
+            <p>$100</p>
+          </footer>
+        </div>
+        <!-- Ticket 2 -->
+        <div class="basic pass">
+          <p class="pass-name">Premium</p>
+          <header class="pass-header">
+            <p>Includes</p>
+          </header>
+          <div class="pass-body">
+            <ul>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem, ipsum dolor</li>
+            </ul>
+          </div>
+          <footer class="pass-footer">
+            <p>$200</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Created by Juan Francisco Galván</p>
+  </footer>
+</body>
+</html>

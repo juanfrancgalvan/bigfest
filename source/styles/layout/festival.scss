@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+
+.festival {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.festival-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .date {
+    color: v.$dark-yellow;
+    font-weight: 700;
+  }
+}

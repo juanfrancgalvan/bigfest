@@ -1,0 +1,63 @@
+@use '../base/variables' as v;
+
+.lineup {
+  background-color: v.$dark-violet;
+  padding: 5rem 0;
+
+  h3,
+  p {
+    text-align: center;
+    color: v.$white;
+  }
+
+  .day {
+    text-transform: uppercase;
+    margin: 5rem 0;
+  }
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+
+  .stage {
+    padding-top: 2rem;
+
+    img {
+      margin: 2rem auto 2rem;
+      width: 15rem;
+    }
+  }
+
+  p {
+    color: v.$black;
+  }
+}
+
+.calendar {
+  li {
+    padding: 2.5rem;
+    font-weight: 700;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.background-blue {
+  background-color: v.$light-violet;
+
+  li:nth-child(odd) {
+    background-color: darken(v.$light-violet, 3%);
+  }
+}
+
+.background-yellow {
+  background-color: v.$light-yellow;
+
+  li:nth-child(odd) {
+    background-color: darken(v.$light-yellow, 3%);
+  }
+}

@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+@mixin escritorio {
+  @media (min-width: v.$escritorio) {
+    @content;
+  }
+}
