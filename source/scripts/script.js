@@ -51,7 +51,7 @@ function createGallery() {
 
 function showImage(id) {
   const image = document.createElement('li')
-  image.innerHTML = `<img loading="lazy" width="200" height="300" src="source/assets/images/original/${id}.jpg" alt="Gallery image">`
+  image.innerHTML = `<img loading="lazy" width="200" height="300" src="build/assets/images/original/${id}.webp" alt="Gallery image">`
   const overlay = document.createElement('div')
   overlay.appendChild(image)
   overlay.classList.add('overlay')
