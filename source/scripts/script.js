@@ -40,38 +40,62 @@ function smoothScroll() {
 function createGallery() {
   const gallery = document.querySelector('.gallery-images')
   for (let i = 1; i <= 12; i++) {
-    const image = document.createElement('li')
-    image.innerHTML = `<img loading="lazy" width="200" height="300" src="build/assets/images/thumb/${i}.webp" alt="Gallery image">`
-    image.onclick = function () {
-      showImage(i)
-    }
+    const image = document.createElement('img')
+    image.src = `build/assets/images/thumb/${i}.webp`
+    image.alt = `Gallery ${i}`
+    image.width = 200
+    image.height = 300
+    image.loading = 'lazy'
     gallery.appendChild(image)
+
+    image.addEventListener('click', function showImage() {
+      const body = document.querySelector('body')
+      const overlay = document.createElement('div')
+      overlay.classList.add('overlay')
+      const image = document.createElement('img')
+      image.src = `source/assets/images/original/${i}.jpg`
+      image.alt = `Gallery ${i}`
+      image.width = 200
+      image.height = 300
+      image.loading = 'lazy'
+      body.appendChild(overlay)
+      overlay.appendChild(image)
+
+      image.addEventListener('click', function closeImage() {
+        overlay.remove()
+      })
+    })
   }
 }
 
-function showImage(id) {
-  const image = document.createElement('li')
-  image.innerHTML = `<img loading="lazy" width="200" height="300" src="build/assets/images/original/${id}.webp" alt="Gallery image">`
-  const overlay = document.createElement('div')
-  overlay.appendChild(image)
-  overlay.classList.add('overlay')
-  overlay.onclick = function () {
-    const body = document.querySelector('body')
-    body.classList.remove('fix')
-    overlay.remove()
-  }
+// function showImage(id) {
+//   const image = document.createElement('li')
+//   image.innerHTML = `<img loading="lazy" width="200" height="300" src="build/assets/images/original/${id}.webp" alt="Gallery image">`
+//   const overlay = document.createElement('div')
+//   overlay.classList.add('overlay')
+//   overlay.appendChild(image)
+  
+//   // overlay.onclick = function () {
+//     //   const body = document.querySelector('body')
+//     //   body.classList.remove('fix')
+//     //   overlay.remove()
+//     // }
+    
+//     const body = document.querySelector('body')
+//     body.appendChild(overlay)
+//   // body.classList.add('fix')
 
-  const body = document.querySelector('body')
-  body.appendChild(overlay)
-  body.classList.add('fix')
+//   image.addEventListener('click', function closeImage() {
+//     overlay.remove()
+//   })
 
-  const closeImage = document.createElement('p')
-  closeImage.textContent = 'X'
-  closeImage.classList.add('close-button')
-  closeImage.onclick = function () {
-    const body = document.querySelector('body')
-    body.classList.remove('fix')
-    overlay.remove()
-  }
-  overlay.appendChild(closeImage)
-}
+//   // const closeImage = document.createElement('p')
+//   // closeImage.textContent = 'X'
+//   // closeImage.classList.add('close-button')
+//   // closeImage.onclick = function () {
+//   //   const body = document.querySelector('body')
+//   //   body.classList.remove('fix')
+//   //   overlay.remove()
+//   // }
+//   // overlay.appendChild(closeImage)
+// }
