@@ -61,7 +61,7 @@ function createGallery() {
       body.appendChild(overlay)
       overlay.appendChild(image)
 
-      image.addEventListener('click', function closeImage() {
+      overlay.addEventListener('click', function closeImage() {
         overlay.remove()
       })
     })
