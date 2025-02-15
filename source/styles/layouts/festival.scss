@@ -3,8 +3,8 @@
 .festival {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  padding: 5rem 0;
+  gap: 2rem;
+  padding: 4rem 0;
 }
 
 .festival-content {
@@ -13,7 +13,12 @@
   justify-content: center;
 
   h2 {
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 10px 0;
   }
 
   .date {

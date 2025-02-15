@@ -1,53 +1,47 @@
 const { src, dest, watch, parallel } = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
-const plumber = require('gulp-plumber')
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
 const postcss = require('gulp-postcss')
+const plumber = require('gulp-plumber')
 const sourcemaps = require('gulp-sourcemaps')
+const terser = require('gulp-terser')
 const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
-const terser = require('gulp-terser-js')
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
 
-function css(done) {
-  src('source/styles/style.scss')
+function styles() {
+  return src('source/styles/style.scss')
     .pipe(sourcemaps.init())
-    .pipe(plumber())
     .pipe(sass())
+    .pipe(plumber())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('build/styles'))
-  done()
 }
 
-function js(done) {
-  src('source/scripts/**/*.js')
+function scripts() {
+  return src('source/scripts/*.js')
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(terser())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('build/scripts'))
-  done()
 }
 
-function images(done) {
-  // const optimization = [imagemin.mozjpeg({quality: 10}), imagemin.optipng({optimizationLevel: 5})]
-  src('source/assets/images/**/*')
+function images() {
+  // const optimization = [imagemin.mozjpeg({quality: 20}), imagemin.optipng({optimizationLevel: 5})]
+  return src('source/images/*')
     .pipe(imagemin())
     .pipe(webp())
-    .pipe(dest('build/assets/images'))
-  done()
+    .pipe(dest('build/images'))
 }
 
-function dev(done) {
-  watch("source/styles/**/*.scss", css)
-  watch("source/scripts/**/*.js", js)
-  done()
+function watchFiles() {
+  watch("source/styles/**/*.scss", styles)
+  watch("source/scripts/**/*.js", scripts)
 }
 
-exports.css = css
-exports.js = js
+exports.styles = styles
+exports.scripts = scripts
 exports.images = images
-
-exports.dev = parallel(css, js, dev)
-exports.convert = parallel(images)
+exports.default = parallel(styles, scripts, watchFiles)

@@ -7,7 +7,7 @@
   <meta name="keywords" content="festival, music, live">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="build/assets/images/favicon.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="build/assets/images/favicon.webp" type="image/webp">
   <link rel="preload" href="build/styles/style.css" as="style">
   <link rel="stylesheet" href="build/styles/style.css">
   <script src="build/scripts/script.js" defer></script>
@@ -15,19 +15,21 @@
 </head>
 <body>
   <header class="header">
-    <h1>Big Fest</h1>
+    <a href="/">
+      <h1>Big Fest</h1>
+    </a>
     <nav class="nav">
+      <a href="#festival">Festival</a>
       <a href="#lineup">Line-Up</a>
       <a href="#gallery">Gallery</a>
       <a href="#tickets">Tickets</a>
     </nav>
   </header>
-  <section class="video">
-    <div class="overlay">
-      <div class="video-content">
-        <h2>Big Fest</h2>
-        <p>October 2024, Argentina</p>
-      </div>
+
+  <section class="hero">
+    <div class="hero-shadow">
+      <h2>The Great Global Event</h2>
+      <p>October 2025, Argentina</p>
     </div>
     <video autoplay muted loop>
       <source src="source/assets/videos/concert.mp4" type="video/mp4">
@@ -35,9 +37,10 @@
       <source src="source/assets/videos/concert.webm" type="video/webm">
     </video>
   </section>
+  
   <main>
-    <section class="festival container">
-      <img loading="lazy" width="200" height="300" src="build/assets/images/hero.webp" alt="Vocalist image">
+    <section class="festival container" id="festival">
+      <img src="build/assets/images/hero.webp" alt="Vocalist image" width="200" height="300" loading="lazy">
       <div class="festival-content">
         <h2>Harmony Wave</h2>
         <p class="date">Octubre 2023, Buenos Aires, Argentina</p>
@@ -51,7 +54,7 @@
       <div class="stage-grid container">
         <div class="stage rock background-blue">
           <p class="stage-name">Indie Stage</p>
-          <img src="build/assets/images/icon2.webp" alt="Indie stage logo">
+          <img src="build/assets/images/icon2.webp" alt="Indie stage logo" width="200" height="300" loading="lazy">
           <ul class="calendar">
             <li>20:00 | <span>Conociendo Rusia</span></li>
             <li>21:00 | <span>Bandalos Chinos</span></li>
@@ -63,7 +66,7 @@
         </div>
         <div class="stage edm background-yellow">
           <p class="stage-name">Hip-Hop Stage</p>
-          <img src="build/assets/images/icon1.webp" alt="Hip-Hop stage logo">
+          <img src="build/assets/images/icon1.webp" alt="Hip-Hop stage logo" width="200" height="300" loading="lazy">
           <ul class="calendar">
             <li>20:00 | <span>Kendrick Lamar</span></li>
             <li>21:00 | <span>J.Cole</span></li>
@@ -77,9 +80,9 @@
       <!-- Line-Up 2 -->
       <p class="day">Saturday 20</p>
       <div class="stage-grid container">
-        <div class="stage rock background-blue">
+        <div class="stage rock background-yellow">
           <p class="stage-name">Pop Stage</p>
-          <img src="build/assets/images/icon2.webp" alt="Pop stage logo">
+          <img src="build/assets/images/icon2.webp" alt="Pop stage logo" width="200" height="300" loading="lazy">
           <ul class="calendar">
             <li>20:00 | <span>Arctic Monkeys</span></li>
             <li>21:00 | <span>Imagine Dragons</span></li>
@@ -89,9 +92,9 @@
             <li>01:00 | <span>Cage the Elephant</span></li>
           </ul>
         </div>
-        <div class="stage edm background-yellow">
+        <div class="stage edm background-blue">
           <p class="stage-name">EDM Stage</p>
-          <img src="build/assets/images/icon1.webp" alt="EDM stage logo">
+          <img src="build/assets/images/icon1.webp" alt="EDM stage logo" width="200" height="300" loading="lazy">
           <ul class="calendar">
             <li>20:00 | <span>Calvin Harris</span></li>
             <li>21:00 | <span>David Guetta</span></li>
@@ -150,7 +153,7 @@
     </section>
   </main>
   <footer class="footer">
-    <p>Created by Juan Francisco Galván</p>
+    <p>Big Fest©</p>
   </footer>
 </body>
 </html>

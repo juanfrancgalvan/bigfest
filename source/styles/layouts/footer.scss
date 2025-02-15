@@ -1,13 +1,13 @@
 @use 'variables.scss' as v;
 
 .footer {
-  background-color: v.$footer;
+  background-color: v.$dark-violet2;
   padding: 3rem;
   
   p {
-    margin: 0;
-    text-align: center;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: v.$white;
+    color: #a7a0ba;
+    text-align: center;
   }
 }

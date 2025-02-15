@@ -1,7 +1,0 @@
-@use 'variables.scss' as v;
-
-@mixin escritorio {
-  @media (min-width: v.$escritorio) {
-    @content;
-  }
-}

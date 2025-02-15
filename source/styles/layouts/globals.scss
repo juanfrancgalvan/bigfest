@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@use 'variables.scss' as v;
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('/fonts/Montserrat-Regular.ttf'), url('/fonts/Montserrat-SemiBold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
 *,
 *::before,
@@ -7,71 +22,38 @@
 }
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
-
-  &.fix {
+  &.fixed {
     overflow: hidden;
   }
 
   &.body-scroll {
-    padding-top: 8.5rem;
+    padding-top: 85px;
   }
-}
-
-.container {
-  width: 70%;
-  margin: 0 auto;
-}
-
-// h1,
-// h2,
-// h3 {
-//   margin: 5rem 0;
-// }
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-p {
-  font-size: 2rem;
-  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  display: block;
+p {
+  line-height: 1.5;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
+img {
+  width: 100%;
+  height: auto;
+}
+
+li {
   list-style: none;
 }
 
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.container {
+  width: 70%;
+  margin: 0 auto;
 }

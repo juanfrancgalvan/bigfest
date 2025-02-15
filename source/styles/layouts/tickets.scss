@@ -1,19 +1,20 @@
 @use 'variables.scss' as v;
 
 .tickets {
-  padding: 5rem 0;
+  padding: 50px 0;
   background-color: v.$dark-violet;
 
   h3 {
     text-align: center;
     color: v.$white;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
+    font-size: 2rem;
   }
 
   .tickets-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 50px;
   }
 }
 
@@ -22,8 +23,10 @@
 
   .pass-name {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 25px;
     color: v.$white;
+    margin-bottom: 20px;
+    font-weight: bold;
   }
 
   &-header,
@@ -42,7 +45,7 @@
 
     p {
       text-transform: uppercase;
-      font-size: 1.6rem;
+      font-size: 16px;
     }
   }
 
@@ -54,7 +57,7 @@
       li,
       :nth-child(odd) {
         background-color: v.$white;
-        padding: 1.3rem;
+        padding: 13px;
         border-bottom: 1px solid #e1e1e1;
         text-align: center;
       }
@@ -65,7 +68,7 @@
     background-color: v.$dark-yellow;
 
     p {
-      font-size: 2.4rem;
+      font-size: 25px;
       font-weight: 700;
     }
   }

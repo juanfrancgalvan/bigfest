@@ -1,13 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  start()
-})
-
-function start() {
-  headerFixed()
-  smoothScroll()
-  createGallery()
-}
-
 function headerFixed() {
   const body = document.querySelector('body')
   const header = document.querySelector('.header')
@@ -24,25 +14,14 @@ function headerFixed() {
     }
   })
 }
-
-function smoothScroll() {
-  const links = document.querySelectorAll('.nav a')
-  links.forEach(enlace => {
-    enlace.addEventListener('click', function (e) {
-      e.preventDefault()
-      const scrollSection = e.target.attributes.href.value
-      const section = document.querySelector(scrollSection)
-      section.scrollIntoView({ behavior: 'smooth' })
-    })
-  })
-}
+headerFixed()
 
 function createGallery() {
   const gallery = document.querySelector('.gallery-images')
   for (let i = 1; i <= 12; i++) {
     const image = document.createElement('img')
     image.src = `build/assets/images/thumb/${i}.webp`
-    image.alt = `Gallery ${i}`
+    image.alt = `Show ${i}`
     image.width = 200
     image.height = 300
     image.loading = 'lazy'
@@ -51,10 +30,12 @@ function createGallery() {
     image.addEventListener('click', function showImage() {
       const body = document.querySelector('body')
       const overlay = document.createElement('div')
-      overlay.classList.add('overlay')
       const image = document.createElement('img')
+      const header = document.querySelector('.header')
+      overlay.classList.add('overlay')
+      header.classList.remove('fixed')
       image.src = `source/assets/images/original/${i}.jpg`
-      image.alt = `Gallery ${i}`
+      image.alt = `Show ${i}`
       image.width = 200
       image.height = 300
       image.loading = 'lazy'
@@ -63,39 +44,9 @@ function createGallery() {
 
       overlay.addEventListener('click', function closeImage() {
         overlay.remove()
+        header.classList.add('fixed')
       })
     })
   }
 }
-
-// function showImage(id) {
-//   const image = document.createElement('li')
-//   image.innerHTML = `<img loading="lazy" width="200" height="300" src="build/assets/images/original/${id}.webp" alt="Gallery image">`
-//   const overlay = document.createElement('div')
-//   overlay.classList.add('overlay')
-//   overlay.appendChild(image)
-  
-//   // overlay.onclick = function () {
-//     //   const body = document.querySelector('body')
-//     //   body.classList.remove('fix')
-//     //   overlay.remove()
-//     // }
-    
-//     const body = document.querySelector('body')
-//     body.appendChild(overlay)
-//   // body.classList.add('fix')
-
-//   image.addEventListener('click', function closeImage() {
-//     overlay.remove()
-//   })
-
-//   // const closeImage = document.createElement('p')
-//   // closeImage.textContent = 'X'
-//   // closeImage.classList.add('close-button')
-//   // closeImage.onclick = function () {
-//   //   const body = document.querySelector('body')
-//   //   body.classList.remove('fix')
-//   //   overlay.remove()
-//   // }
-//   // overlay.appendChild(closeImage)
-// }
+createGallery()
