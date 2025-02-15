@@ -2,9 +2,10 @@ function headerFixed() {
   const body = document.querySelector('body')
   const header = document.querySelector('.header')
   const festival = document.querySelector('.festival')
+  const hero = document.querySelector('.hero')
 
   window.addEventListener('scroll', function () {
-    if (festival.getBoundingClientRect().bottom < 0) {
+    if (hero.getBoundingClientRect().bottom < 0 && festival.getBoundingClientRect().bottom) {
       header.classList.add('fixed')
       body.classList.add('body-scroll')
     }

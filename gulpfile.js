@@ -29,9 +29,9 @@ function scripts() {
 }
 
 function images() {
-  // const optimization = [imagemin.mozjpeg({quality: 20}), imagemin.optipng({optimizationLevel: 5})]
-  return src('source/images/*')
-    .pipe(imagemin())
+  const optimization = [imagemin.mozjpeg({quality: 20}), imagemin.optipng({optimizationLevel: 5})]
+  return src('source/assets/images/**/*')
+    .pipe(imagemin(optimization))
     .pipe(webp())
     .pipe(dest('build/images'))
 }
