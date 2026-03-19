@@ -1,4 +1,4 @@
-@use 'variables.scss' as v;
+@use '../base/variables.scss' as v;
 
 .lineup {
   background-color: v.$dark-violet;

@@ -1,8 +1,4 @@
 @media only screen and (width <=992px) {
-  .container {
-    width: 90%;
-  }
-
   .festival {
     grid-template-columns: auto;
   }
@@ -13,13 +9,10 @@
 }
 
 @media only screen and (width <=576px) {
-  .container {
-    width: 90%;
-  }
-
   .header {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     h1 {
       margin-bottom: 2rem;

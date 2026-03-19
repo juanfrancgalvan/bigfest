@@ -1,22 +1,3 @@
-function headerFixed() {
-  const body = document.querySelector('body')
-  const header = document.querySelector('.header')
-  const festival = document.querySelector('.festival')
-  const hero = document.querySelector('.hero')
-
-  window.addEventListener('scroll', function () {
-    if (hero.getBoundingClientRect().bottom < 0 && festival.getBoundingClientRect().bottom) {
-      header.classList.add('fixed')
-      body.classList.add('body-scroll')
-    }
-    else {
-      header.classList.remove('fixed')
-      body.classList.remove('body-scroll')
-    }
-  })
-}
-headerFixed()
-
 function createGallery() {
   const gallery = document.querySelector('.gallery-images')
   for (let i = 1; i <= 12; i++) {

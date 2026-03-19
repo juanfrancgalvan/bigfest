@@ -1,4 +1,4 @@
-@use 'variables.scss' as v;
+@use '../base/variables.scss' as v;
 
 .header {
   display: flex;
@@ -7,15 +7,11 @@
   align-items: center;
   padding: 20px 50px;
   background-color: v.$dark-violet;
-
-  &.fixed {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    box-shadow: 0rem 0.1rem 0.3rem #000;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 
   h1 {
     color: v.$white;
